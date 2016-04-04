@@ -47,7 +47,7 @@ console.log(tag);
     toSlug: function(str) {
         return str.toLowerCase()
             .replace(/ /g, '-')
-            .replace([^一-龠ぁ-ゔァ-ヴーa-zA-Z0-9ａ-ｚＡ-Ｚ０-９々〆〤-]+/g, '');
+            .replace(/[^一-龠ぁ-ゔァ-ヴーa-zA-Z0-9ａ-ｚＡ-Ｚ０-９々〆〤-]+/g, '');
     },
 
 
