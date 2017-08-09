@@ -22,26 +22,28 @@ if(Meteor.isServer) {
 
 
 TagsUtil = {
-    findOrCreate: function(title) {
+    findOrCreate: function(title, tagSet) {
         var name = this.toSlug(title); //Sanitized url valid tagname
 
-        var tag = CloudspiderTags.findOne({
+        var query = {
             name: name
-        });
-console.log(tag);
+        };
+        if(tagSet) query.set= tagSet;
+        var tag = CloudspiderTags.findOne(query);
+
+        if(TagsUtil.debug) console.log(tag, tagSet, query);
+
         if(tag) {
             return tag;
         }
         CloudspiderTags.insert({
             name: name,
+            set: (tagSet == null || tagSet == '*') ? 'default': tagSet,
             title: title,
             visitCount: 0
         });
 
-        return CloudspiderTags.findOne({
-            name: name
-        });
-
+        return CloudspiderTags.findOne(query);
     },
 
     toSlug: function(str) {

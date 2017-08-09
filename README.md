@@ -1,6 +1,10 @@
 ## Autoform Tags Typeahead
 
-Extends autoform with a tags input including typeahead. Besides providing the input, it also takes care of storing the unique tags for use in the typeahead addition to autofill the input while typing.
+Extends autoform with a tags input including typeahead.
+Besides providing the input, it also takes care of storing the unique tags for use in the typeahead addition to autofill the input while typing.
+
+Possible tags values are organized into sets. Lookups can specify what set to use, or to use all sets; by default, the 'default' set is used.
+The tags themselves do not include a specification of the set.
  
 ## Installation
 
@@ -13,13 +17,14 @@ $ meteor add sojourneer:autoform-tags-typeahead
 ## Example usage
 
 ```javascript
-
+// The schema for the tagging result
 SomeSchema = new SimpleSchema({
     tags: {
         type: [String],
         label: 'Tags',
         autoform: {
             type: 'tagsTypeahead',
+            'tag-set': 'mySet'      //optional. Default is 'default'.
         }
     }
 });
@@ -50,14 +55,17 @@ This collection is used as source for typeahead to autofill the input when typin
 ```json
 {
     "name": "amsterdam",
+    "set": "mySet",
     "title": "Amsterdam"
 }
 {
     "name": "hamburg",
+    "set": "mySet",
     "title": "Hamburg"
 }
 {
     "name": "boston",
+    "set": "mySet",
     "title": "Boston"
 }
 ```
