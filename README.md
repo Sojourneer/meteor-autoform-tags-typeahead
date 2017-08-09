@@ -7,7 +7,7 @@ Extends autoform with a tags input including typeahead. Besides providing the in
 In a Meteor app directory, enter:
 
 ```
-$ meteor add cloudspider:autoform-tags-typeahead
+$ meteor add sojourneer:autoform-tags-typeahead
 ```
 
 ## Example usage
@@ -66,3 +66,5 @@ This collection is used as source for typeahead to autofill the input when typin
 [ajduke:bootstrap-tagsinput](https://atmospherejs.com/ajduke/bootstrap-tagsinput) 
 
 [mrt:bootstrap3-typeahead](https://atmospherejs.com/mrt/bootstrap3-typeahead) 
+
+Forked from [cloudspider:autoform-tags-typeahead](https://atmospherejs.com/cloudspider/autoform-tags-typeahead)

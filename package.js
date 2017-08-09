@@ -1,7 +1,7 @@
 Package.describe({
     name: 'sojourneer:autoform-tags-typeahead',
     version: '0.7.1',
-    summary: 'Provides a autoform tags input with typeahead functionality. Adds Japanese support to cloudspider:autoform-tags-typeahead',
+    summary: 'Provides a autoform tags input with typeahead functionality with Japanese support',
     git: 'https://github.com/Sojourneer/meteor-autoform-tags-typeahead.git',
     documentation: 'README.md'
 });
