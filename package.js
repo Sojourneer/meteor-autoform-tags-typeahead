@@ -13,7 +13,7 @@ Package.onUse(function (api) {
         'mongo',
         'aldeed:simple-schema@1.3.3',
         'aldeed:collection2@2.5.0',
-        'aldeed:autoform@5.5.0',
+        'aldeed:autoform@6.2.0',
         'ajduke:bootstrap-tagsinput@0.7.0',
         'mrt:bootstrap3-typeahead@0.1.1',
         'templating'
